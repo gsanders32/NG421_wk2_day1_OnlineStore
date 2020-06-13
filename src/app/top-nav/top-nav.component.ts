@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from '../models/iproduct';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
 
-  constructor() { }
+  shoppingCart: Array<IProduct>;
+
+  constructor(private productService: ProductService ) { }
 
   ngOnInit() {
+    this.shoppingCart = this.productService.getShoppingCart();
   }
 
 }
