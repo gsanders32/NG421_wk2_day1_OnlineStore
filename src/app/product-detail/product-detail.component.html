@@ -1,4 +1,4 @@
-<div class="col-sm-4 col-lg-4 col-md-4">
+<!-- <div class="col-sm-4 col-lg-4 col-md-4">
     <div class="thumbnail">
         <img [src]="product.imgUrl" alt=""/>
         <div class="caption">
@@ -19,4 +19,33 @@
         </div>
         <button class="btn btn-sm btn-primary" (click)="onProductAdded()">Add to Cart</button>
     </div>
+</div> -->
+
+<div class="col-sm-4 col-lg-4 col-md-4" >
+    <!-- <div class="thumbnail"> -->
+        <div class="card col-12" >
+            <img [src]="product.imgUrl" class="card-img-top col-12" alt=""/>
+            <div class="card-body">
+                <div class="card-title">
+                    <h5 class=" pull-right">{{product.price}}</h5>
+                        <h5 ><a href="#">{{product.name}}</a></h5>
+                    
+                </div>
+                
+                
+                <p class="card-text">{{product.description}}</p>
+                <div class="ratings">
+                    <p class="pull-right">{{product.reviews}} reviews</p>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </p>
+                </div>
+                <a href="#" class="btn btn-primary" (click)="onProductAdded()">Add to Cart</a>
+            </div>
+        </div>
+    <!-- </div> -->
 </div>
